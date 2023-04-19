@@ -1,0 +1,1107 @@
+{
+	"info": {
+		"_postman_id": "0971a03c-890a-4b32-9491-dade4dc7c032",
+		"name": "Understanding My Facility",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "7128205"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "api.Pd*!(5675"
+							},
+							{
+								"key": "language",
+								"value": "2"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "briandallgoodtest@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "device_type",
+									"value": "abc123456",
+									"type": "text"
+								},
+								{
+									"key": "device_token",
+									"value": "abc123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{baseUrl}}user/login"
+					},
+					"response": []
+				},
+				{
+					"name": "User Change Password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "api.Pd*!(5675"
+							},
+							{
+								"key": "user-token",
+								"value": "36b00821c553e213309a449a4eba5547"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "old_password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{baseUrl}}user/change/password"
+					},
+					"response": []
+				},
+				{
+					"name": "get api user logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "api.Pd*!(5675",
+								"type": "text"
+							},
+							{
+								"key": "user-token",
+								"value": "36b00821c553e213309a449a4eba5547",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "6",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{baseUrl}}user/mobilelogout"
+					},
+					"response": []
+				},
+				{
+					"name": "User Forgot Password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "api.Pd*!(5675"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "test123@yopmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{baseUrl}}user/forgot/password"
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "api.Pd*!(5675"
+							},
+							{
+								"key": "user-token",
+								"value": "36b00821c553e213309a449a4eba5547"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/plain",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Brian Allgood Army",
+									"type": "text"
+								},
+								{
+									"key": "mobile_no",
+									"value": "312456980",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}user/update",
+							"host": [
+								"{{baseUrl}}user"
+							],
+							"path": [
+								"update"
+							],
+							"query": [
+								{
+									"key": "AA",
+									"value": "AA",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Languages",
+			"item": [
+				{
+					"name": "Update User Language",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "api.Pd*!(5675"
+							},
+							{
+								"key": "user-token",
+								"value": "36b00821c553e213309a449a4eba5547"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/plain",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "language_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}update-user-language",
+							"host": [
+								"{{baseUrl}}update-user-language"
+							],
+							"query": [
+								{
+									"key": "AA",
+									"value": "AA",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Languages",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "api.Pd*!(5675"
+							},
+							{
+								"key": "user-token",
+								"value": "36b00821c553e213309a449a4eba5547"
+							},
+							{
+								"key": "user-token",
+								"value": "862f42f5a6e7b46048693a156eba247a",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": "{{baseUrl}}languages"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "GET Categories",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "api.Pd*!(5675"
+							},
+							{
+								"key": "user-token",
+								"value": "36b00821c553e213309a449a4eba5547"
+							},
+							{
+								"key": "user-token",
+								"value": "862f42f5a6e7b46048693a156eba247a",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseUrl}}categories?hospital_id=1&user_id=3",
+							"host": [
+								"{{baseUrl}}categories"
+							],
+							"query": [
+								{
+									"key": "hospital_id",
+									"value": "1"
+								},
+								{
+									"key": "user_id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET All Course By Category ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "api.Pd*!(5675"
+							},
+							{
+								"key": "user-token",
+								"value": "36b00821c553e213309a449a4eba5547"
+							},
+							{
+								"key": "user-token",
+								"value": "862f42f5a6e7b46048693a156eba247a",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseUrl}}all-course-by-category-id?hospital_id=1&user_id=3&category_id=8",
+							"host": [
+								"{{baseUrl}}all-course-by-category-id"
+							],
+							"query": [
+								{
+									"key": "hospital_id",
+									"value": "1"
+								},
+								{
+									"key": "user_id",
+									"value": "3"
+								},
+								{
+									"key": "category_id",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Course",
+			"item": [
+				{
+					"name": "GET Course Details By ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "api.Pd*!(5675"
+							},
+							{
+								"key": "user-token",
+								"value": "36b00821c553e213309a449a4eba5547"
+							},
+							{
+								"key": "user-token",
+								"value": "862f42f5a6e7b46048693a156eba247a",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseUrl}}course-details-by-id?course_id=3&user_id=2",
+							"host": [
+								"{{baseUrl}}course-details-by-id"
+							],
+							"query": [
+								{
+									"key": "course_id",
+									"value": "3"
+								},
+								{
+									"key": "user_id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Quizz",
+			"item": [
+				{
+					"name": "GET Quiz Questions By Course ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "api.Pd*!(5675"
+							},
+							{
+								"key": "user-token",
+								"value": "36b00821c553e213309a449a4eba5547"
+							},
+							{
+								"key": "user-token",
+								"value": "862f42f5a6e7b46048693a156eba247a",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseUrl}}quiz-questions-by-course-id?course_id=14&user_id=3&hospital_id=1",
+							"host": [
+								"{{baseUrl}}quiz-questions-by-course-id"
+							],
+							"query": [
+								{
+									"key": "course_id",
+									"value": "14"
+								},
+								{
+									"key": "user_id",
+									"value": "3"
+								},
+								{
+									"key": "hospital_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Quiz Answer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "api.Pd*!(5675"
+							},
+							{
+								"key": "user-token",
+								"value": "19acb649420c75eebd6ecedc609dc715"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/plain",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "course_quiz_id",
+									"value": "14",
+									"type": "text"
+								},
+								{
+									"key": "quiz_question_id[]",
+									"value": "35",
+									"type": "text"
+								},
+								{
+									"key": "quiz_answer_id[][]",
+									"value": "108",
+									"type": "text"
+								},
+								{
+									"key": "quiz_question_id[]",
+									"value": "47",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "quiz_answer_id[][]",
+									"value": "94",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "quiz_question_id[]",
+									"value": "49",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "quiz_answer_id[][]",
+									"value": "104",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}post-quiz-answer",
+							"host": [
+								"{{baseUrl}}post-quiz-answer"
+							],
+							"query": [
+								{
+									"key": "AA",
+									"value": "AA",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Search Course",
+			"item": [
+				{
+					"name": "GET Search Course",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "api.Pd*!(5675"
+							},
+							{
+								"key": "user-token",
+								"value": "36b00821c553e213309a449a4eba5547"
+							},
+							{
+								"key": "user-token",
+								"value": "862f42f5a6e7b46048693a156eba247a",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseUrl}}search-course?search_keyword=u&user_id=6",
+							"host": [
+								"{{baseUrl}}search-course"
+							],
+							"query": [
+								{
+									"key": "search_keyword",
+									"value": "u"
+								},
+								{
+									"key": "user_id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Quizz",
+			"item": [
+				{
+					"name": "GET User Quiz List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "api.Pd*!(5675"
+							},
+							{
+								"key": "user-token",
+								"value": "36b00821c553e213309a449a4eba5547"
+							},
+							{
+								"key": "user-token",
+								"value": "862f42f5a6e7b46048693a156eba247a",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseUrl}}user-quiz-list?user_id=6&page=1",
+							"host": [
+								"{{baseUrl}}user-quiz-list"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "6"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Certificates",
+			"item": [
+				{
+					"name": "GET User Certificates List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "api.Pd*!(5675"
+							},
+							{
+								"key": "user-token",
+								"value": "36b00821c553e213309a449a4eba5547"
+							},
+							{
+								"key": "user-token",
+								"value": "862f42f5a6e7b46048693a156eba247a",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseUrl}}user-certificates?user_id=6",
+							"host": [
+								"{{baseUrl}}user-certificates"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET User Certificates Details",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "api.Pd*!(5675"
+							},
+							{
+								"key": "user-token",
+								"value": "36b00821c553e213309a449a4eba5547"
+							},
+							{
+								"key": "user-token",
+								"value": "862f42f5a6e7b46048693a156eba247a",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseUrl}}user-certificates-details?course_id=1&user_id=6&user_quiz_id=1",
+							"host": [
+								"{{baseUrl}}user-certificates-details"
+							],
+							"query": [
+								{
+									"key": "course_id",
+									"value": "1"
+								},
+								{
+									"key": "user_id",
+									"value": "6"
+								},
+								{
+									"key": "user_quiz_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "News",
+			"item": [
+				{
+					"name": "GET News List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "api.Pd*!(5675"
+							},
+							{
+								"key": "user-token",
+								"value": "36b00821c553e213309a449a4eba5547"
+							},
+							{
+								"key": "user-token",
+								"value": "862f42f5a6e7b46048693a156eba247a",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseUrl}}news-list?hospital_id=1",
+							"host": [
+								"{{baseUrl}}news-list"
+							],
+							"query": [
+								{
+									"key": "hospital_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET News Details",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "api.Pd*!(5675"
+							},
+							{
+								"key": "user-token",
+								"value": "36b00821c553e213309a449a4eba5547"
+							},
+							{
+								"key": "user-token",
+								"value": "862f42f5a6e7b46048693a156eba247a",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseUrl}}news-details?news_id=1&hospital_id=1",
+							"host": [
+								"{{baseUrl}}news-details"
+							],
+							"query": [
+								{
+									"key": "news_id",
+									"value": "1"
+								},
+								{
+									"key": "hospital_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Notification",
+			"item": [
+				{
+					"name": "Chat Message Counter",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "api.Pd*!(5675",
+								"type": "text"
+							},
+							{
+								"key": "user-token",
+								"value": "36b00821c553e213309a449a4eba5547",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}message-counter?user_id=6",
+							"host": [
+								"{{baseUrl}}message-counter"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Notification nread count",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "api.Pd*!(5675"
+							},
+							{
+								"key": "user-token",
+								"value": "36b00821c553e213309a449a4eba5547"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}notification/unread_count?user_id=6",
+							"host": [
+								"{{baseUrl}}notification"
+							],
+							"path": [
+								"unread_count"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Notification list",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "api.Pd*!(5675"
+							},
+							{
+								"key": "user-token",
+								"value": "36b00821c553e213309a449a4eba5547"
+							}
+						],
+						"url": "{{baseUrl}}notification/list"
+					},
+					"response": []
+				},
+				{
+					"name": "notification settings",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "api.Pd*!(5675"
+							},
+							{
+								"key": "user-token",
+								"value": "36b00821c553e213309a449a4eba5547"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}notification/notification_settings?user_id=6",
+							"host": [
+								"{{baseUrl}}notification"
+							],
+							"path": [
+								"notification_settings"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Notification Settings",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "api.Pd*!(5675"
+							},
+							{
+								"key": "user-token",
+								"value": "36b00821c553e213309a449a4eba5547"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "is_notification_on",
+									"value": "1",
+									"description": "1,0",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{baseUrl}}notification/update-notification-settings"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Notification",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "api.Pd*!(5675"
+							},
+							{
+								"key": "user-token",
+								"value": "36b00821c553e213309a449a4eba5547"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "is_read",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "is_viewed",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": "{{baseUrl}}notification/update/5"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Course Complete",
+			"item": [
+				{
+					"name": "Add Complete  Course",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "api.Pd*!(5675",
+								"type": "text"
+							},
+							{
+								"key": "user-token",
+								"value": "36b00821c553e213309a449a4eba5547",
+								"type": "text"
+							},
+							{
+								"key": "user-token",
+								"value": "862f42f5a6e7b46048693a156eba247a",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user_id",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "course_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "hospital_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{baseUrl}}mark-complete-course"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
