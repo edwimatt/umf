@@ -1,0 +1,84 @@
+body{
+    margin:0;
+    padding:0;
+    border:0;
+}
+.heading-1{
+    color:white;
+}
+.navbar{
+    margin-bottom:0px;
+    border-radius: 0px;
+}
+.nav1{
+    background: #56a5e6;
+}
+.nav2{
+background: #40bc51;
+min-height: 40px;
+}
+.calender{
+    margin-top:50px;
+}
+.circle{
+    background: #6bc778;
+    padding: 6px;
+    color: #fff;
+    border-radius: 100px;
+    font-size: 25px;
+}
+.on-call .fa{
+    color: #6bc778;
+}
+.mt-15{
+    margin-top:15px;
+}
+.on-leave .fa{
+    color: #e04e6f;
+}
+
+.cust-width{
+    width:20%;
+}
+.mt-30{
+    margin-top:30px;
+}
+
+.day{
+    color:gray;
+    position: relative;
+    top: -4px;
+}
+.on-call span, .on-leave span{
+    font-size: 18px;
+}
+.panel-default {
+    border-color: #ddd;
+    box-shadow: 2px 3px 8px grey !important;
+    border-radius: 8px;
+}
+.physician{
+    font-weight: 600;
+    font-size: 12px;
+
+}
+.disabled{
+    background: #ddd;
+    opacity: 0.7;
+}
+
+.disabled2{
+    background: #ddd;
+    opacity: 0.6;
+}
+
+.disabled2 .circle{
+    background: lightgray;
+}
+
+@media (min-width: 1200px)
+{
+    .col-md-2 {
+        width: 20%;
+    }
+}
