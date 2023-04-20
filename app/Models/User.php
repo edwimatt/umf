@@ -166,18 +166,6 @@ class User extends Model
             ->get()->unique();
     }
 
-    public static function verifySubscription($user_id, $user_group_id, $subscription_expiry_date)
-    {
-
-        $date_now = date("Y-m-d");
-
-        if ($date_now <= $subscription_expiry_date)
-            return true;
-
-        //\DB::statement("UPDATE user SET user_group_id = 1 WHERE id = $user_id");
-        return false;
-    }
-
     public static function getUserDataById($user_id)
     {
         //return DB::select("SELECT * FROM `user` WHERE id = '".$user_id."'");
